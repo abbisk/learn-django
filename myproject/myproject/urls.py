@@ -17,11 +17,17 @@ from django.contrib import admin
 from django.urls import path
 from django.http import HttpResponse
 
+
+def sum(request,no1,no2):
+    res = no1+no2
+    resp =  HttpResponse("Sum of no" +str(res))
+    return resp
 def my_view(request):
     resp = HttpResponse("<h1>Welcome to Homepage</h1>")
     return resp
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('sum/<int:no1>/<int:no2>/', sum),
     path('',my_view),
 ]
