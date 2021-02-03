@@ -20,8 +20,14 @@ from django.http import HttpResponse
 
 def sum(request,no1,no2):
     res = no1+no2
-    resp =  HttpResponse("Sum of no" +str(res))
+    resp =  HttpResponse("Sum of no = " +str(res))
     return resp
+
+def multiply(request, no1,no2):
+    res = no1*no2
+    resp = HttpResponse("Product of no = " +str(res))
+    return resp
+
 def my_view(request):
     resp = HttpResponse("<h1>Welcome to Homepage</h1>")
     return resp
@@ -29,5 +35,6 @@ def my_view(request):
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('sum/<int:no1>/<int:no2>/', sum),
+    path('multiply/<int:no1>/<int:no2>/', multiply),
     path('',my_view),
 ]
