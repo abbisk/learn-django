@@ -39,4 +39,5 @@ urlpatterns = [
     path('multiply/<int:no1>/<int:no2>/', multiply),
     path('',my_view),
     path('calc/', include('calc.urls')),
+    path('students/', include('students.urls')),
 ]
