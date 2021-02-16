@@ -4,5 +4,5 @@ from django.http import HttpResponse
 from .views import *
 
 urlpatterns = [
-    path('', home_view),
+    path('register', view_register_student)
 ]
