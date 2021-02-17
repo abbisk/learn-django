@@ -20,3 +20,15 @@ def view_register_student(request):
 
         else:
             pass
+
+
+def view_show_all_students(request):
+    all_stu = Student.objects.all()
+    d1={'allstudents':all_stu}
+    resp = render(request,'students/all_students.html',context=d1)
+    return resp
+
+def view_course_by_student_id(request,id):
+    d1={}
+    resp = render(request,'students/student_wise_courses.html',context=d1)
+    return resp

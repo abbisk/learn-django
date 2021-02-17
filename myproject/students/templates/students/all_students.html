@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Students</title>
+    <style>
+        table {
+        font-family: arial, sans-serif;
+        border-collapse: collapse;
+        width: 100%;
+    }
+    
+    td, th {
+        border: 5px solid #dddddd;
+        text-align: left;
+        padding: 8px;
+    }
+    
+    tr:nth-child(even) {
+        background-color: #dddddd;
+    }
+        </style>
+</head>
+<body>
+    <table>
+        <tr><th>SN</th><th>ID</th><th>Name</th><th>Address</th><th>Mobile</th><th>Course Details</th></tr>
+        {% for e in allstudents %}
+        <tr>
+        <td>{{forloop.counter}}</td>
+        <td>{{e.id}}</td>
+        <td>{{e.name}}</td>
+        <td>{{e.address}}</td>
+        <td>{{e.mobile}}</td>
+        <td><a href="#">Course Details</a></td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
