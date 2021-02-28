@@ -40,4 +40,6 @@ urlpatterns = [
     path('',my_view),
     path('calc/', include('calc.urls')),
     path('students/', include('students.urls')),
+    path('tag/', include('tag_filter.urls')),
+
 ]

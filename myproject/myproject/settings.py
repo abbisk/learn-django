@@ -38,7 +38,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'calc',
-    'students'
+    'students',
+    'tag_filter'
 ]
 
 MIDDLEWARE = [
