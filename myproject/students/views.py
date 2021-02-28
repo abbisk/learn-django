@@ -5,6 +5,10 @@ from django.http import HttpResponse
 # Create your views here.
 
 
+
+def home_view(request):
+    resp = render(request,'students/home.html')
+    return resp
 def view_register_student(request):
     if request.method=="GET":
         frmStudent = StudentForm()
