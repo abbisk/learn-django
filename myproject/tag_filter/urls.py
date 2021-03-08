@@ -6,5 +6,6 @@ from .views import *
 
 urlpatterns = [
     path('',home_view),
+    path('tags',view_tag)
 
 ]
