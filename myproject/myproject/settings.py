@@ -39,7 +39,9 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'calc',
     'students',
-    'tag_filter'
+    'tag_filter',
+    'websecurity'
+    
 ]
 
 MIDDLEWARE = [
