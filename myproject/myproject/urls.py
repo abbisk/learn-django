@@ -41,7 +41,7 @@ urlpatterns = [
     path('calc/', include('calc.urls')),
     path('students/', include('students.urls')),
     path('tag/', include('tag_filter.urls')),
-    path('security/', include('websecurity.urls')),
+    path('websecurity/', include('websecurity.urls')),
 
 
 ]
